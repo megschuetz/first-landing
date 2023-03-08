@@ -1,11 +1,12 @@
 <div class="grid-container">
-  <p>Filters:{{ filters }}</p>
+  <!-- <p>Filters:{{ filters }}</p> -->
   <ag-grid-angular
     class="ag-theme-alpine" 
     [rowData]="rowData"
     [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
     (gridReady)="onGridReady($event)"
-    (filterChanged)="getFilters()"
+    [sideBar]="sideBar"
   >
   </ag-grid-angular>
 </div>

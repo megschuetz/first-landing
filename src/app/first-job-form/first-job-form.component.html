@@ -2,6 +2,13 @@
   <h2>Your Story</h2>
   <form #userStory="ngForm" (ngSubmit)="submit(userStory)">
     <div class="form-group">
+      <label for="firstname">Cohort</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Cohort(xxxx)</mat-label>
+        <input required matInput>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
       <label for="firstname">Name</label>
       <mat-form-field appearance="fill">
         <mat-label>Name</mat-label>

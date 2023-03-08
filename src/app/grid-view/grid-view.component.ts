@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AlumniService } from '../alumni.service';
 import { IAlumni } from '../interfaces/alumni';
-import { ColDef, GridApi } from 'ag-grid-community';
+import { ColDef, GridApi, SideBarDef } from 'ag-grid-community';
 import { Grid } from '@ag-grid-community/all-modules';
 import "ag-grid-enterprise";
 
@@ -20,30 +20,46 @@ export class GridViewComponent implements OnInit {
     this.alumniService.getAlumni()
       .subscribe(data => this.rowData = data)
   }
-
+//valueGetter: ({ data }) => `${data.name} is a ${data.title}`
   columnDefs: ColDef[] = [
-    { headerName: "Name", field: "name", sortable: true, filter: true},
-    { headerName: "Status", field: "employed", sortable: true, filter: true, },
-    { headerName: "Permanent", field: "permenent", sortable: true, filter: true},
-    { headerName: "Title", field: "title", sortable: true, filter: true},
-    { headerName: "Company", field: "company", sortable: true, filter: true},
-    { headerName: "How", field: "effectiveChanel", sortable: true, filter: true}
+    { headerName: "Cohort", field: "cohort"},
+    { headerName: "Name", field:"name", },
+    { headerName: "Status", field: "employed", },
+    { headerName: "Permanent", field: "permenent"},
+    { headerName: "Title", field: "title"},
+    { headerName: "Company", field: "company"},
+    { headerName: "How", field: "effectiveChanel"},
   ]
+
+  defaultColDef: ColDef = {
+    sortable: true,
+    filter:'agSetColumnFilter',
+    resizable: true,
+  }
 
   public gridApi: GridApi | undefined;
 
   onGridReady({ api } : { api: GridApi }) {
     this.gridApi = api;
     api.sizeColumnsToFit();
-    api.setHeaderHeight(50)
+    api.setHeaderHeight(50);
+    api.closeToolPanel()
+
+    if(api.isToolPanelShowing()) {
+      api.getToolPanelInstance('filters')?.expandFilters();
+    }
   }
 
-  public filters: string[] = []
-  public filterObj: {[key: string]: any} = {}
+  public sideBar: SideBarDef | string | string[] | boolean | null = 'filters';
 
-  getFilters(): void {
+  // public filters: string[] = []
+  // public filterObj: {[key: string]: any} | undefined = {}
+
+  // getFilters(): void {
   
-    console.log(this.gridApi?.getFilterModel()["permenent"].values)
-    this.filters = this.gridApi?.getFilterModel()["permenent"].values
-  }
+  //   this.filterObj = this.gridApi?.getFilterModel()
+    
+  //   console.log(this.columnDefs)
+  //   this.filters = this.gridApi?.getFilterModel()['permenent'].values
+  // }
 }

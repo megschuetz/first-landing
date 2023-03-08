@@ -1,30 +1,34 @@
 [
   {
+    "cohort": 2203,
     "name": "Kristy", 
     "employed": "true", 
     "permenent": "employee", 
-    "title": "Software Dev", 
+    "title": "Software Developer", 
     "company": "Government",
     "effectiveChanel": "slack channel"
   },
   {
+    "cohort": 2205,
     "name": "Sarah", 
     "employed": "false", 
     "permenent": "internship", 
-    "title": "Software Dev", 
+    "title": "Software Engineer", 
     "company": "Education",
     "effectiveChanel": "friend"
   
   },
   {
+    "cohort": 2201,
     "name": "Ellie", 
     "employed": "true", 
     "permenent": "apprenticeship", 
-    "title": "Software Dev", 
+    "title": "Frontend Developer", 
     "company": "Marketing",
     "effectiveChanel": "coworker"
   },
   {
+    "cohort": 2203,
     "name": "Margret", 
     "employed": "false", 
     "permenent": "employee", 

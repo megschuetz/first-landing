@@ -1,4 +1,5 @@
 export interface IAlumni {
+  cohort: number,
   name: string,
   employed: boolean,
   permenant: string,
