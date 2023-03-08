@@ -1,0 +1,59 @@
+<div class="container">
+  <h2>Your Story</h2>
+  <form #userStory="ngForm" (ngSubmit)="submit(userStory)">
+    <div class="form-group">
+      <label for="firstname">Name</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Name</mat-label>
+        <input required matInput>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="lastname">Do you have a job?</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Y/N</mat-label>
+        <mat-select required>
+          <mat-option value="yes">Yes</mat-option>
+          <mat-option value="no">Not Yet</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="role">Is it Permanent?</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Options</mat-label>
+        <mat-select required>
+          <mat-option value="Employee">Permanent Position</mat-option>
+          <mat-option value="Intern">Internship</mat-option>
+          <mat-option value="Apprenticeship">Apprenticeship</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="summary">Title</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input required matInput>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="summary">Company</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Company</mat-label>
+        <input required matInput>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="summary">How?</label>
+      <mat-form-field appearance="fill">
+        <mat-label>Options</mat-label>
+        <mat-select required>
+          <mat-option value="Personal Connection">Friend / Family</mat-option>
+          <mat-option value="Alumni Referral">Alumni Referral</mat-option>
+          <mat-option value="Cold Apply">Cold Apply</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <button class="btn">Submit</button>
+  </form>
+</div>

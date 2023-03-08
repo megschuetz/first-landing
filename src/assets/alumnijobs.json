@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Kristy", 
+    "employed": "true", 
+    "permenent": "employee", 
+    "title": "Software Dev", 
+    "company": "Government",
+    "effectiveChanel": "slack channel"
+  },
+  {
+    "name": "Sarah", 
+    "employed": "false", 
+    "permenent": "internship", 
+    "title": "Software Dev", 
+    "company": "Education",
+    "effectiveChanel": "friend"
+  
+  },
+  {
+    "name": "Ellie", 
+    "employed": "true", 
+    "permenent": "apprenticeship", 
+    "title": "Software Dev", 
+    "company": "Marketing",
+    "effectiveChanel": "coworker"
+  },
+  {
+    "name": "Margret", 
+    "employed": "false", 
+    "permenent": "employee", 
+    "title": "Software Dev", 
+    "company": "Government",
+    "effectiveChanel": "referral"
+  }
+]
