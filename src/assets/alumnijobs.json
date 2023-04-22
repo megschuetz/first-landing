@@ -1,39 +1,39 @@
 [
   {
     "cohort": 2203,
-    "name": "Kristy", 
-    "employed": "true", 
-    "permenent": "employee", 
+    "program": "FE",
+    "name": "Kristy Nygen", 
+    "permanent": "Employee", 
     "title": "Software Developer", 
     "company": "Government",
-    "effectiveChanel": "slack channel"
+    "effectiveChanel": "Alumni Referral"
   },
   {
     "cohort": 2205,
-    "name": "Sarah", 
-    "employed": "false", 
-    "permenent": "internship", 
+    "program": "FE",
+    "name": "Joe Shmo", 
+    "permanent": "Internship", 
     "title": "Software Engineer", 
     "company": "Education",
-    "effectiveChanel": "friend"
+    "effectiveChanel": "Friend / Family"
   
   },
   {
     "cohort": 2201,
-    "name": "Ellie", 
-    "employed": "true", 
-    "permenent": "apprenticeship", 
+    "program": "BE",
+    "name": "Ellie Smith", 
+    "permanent": "Apprenticeship", 
     "title": "Frontend Developer", 
     "company": "Marketing",
-    "effectiveChanel": "coworker"
+    "effectiveChanel": "Cold Apply"
   },
   {
     "cohort": 2203,
-    "name": "Margret", 
-    "employed": "false", 
-    "permenent": "employee", 
+    "program": "BE",
+    "name": "Margret Loowho", 
+    "permanent": "Employee", 
     "title": "Software Dev", 
     "company": "Government",
-    "effectiveChanel": "referral"
+    "effectiveChanel": "Cold Apply"
   }
 ]

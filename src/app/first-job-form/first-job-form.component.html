@@ -1,36 +1,38 @@
 <div class="container">
   <h2>Your Story</h2>
-  <form #userStory="ngForm" (ngSubmit)="submit(userStory)">
+  <form [formGroup]="jobStoryForm" (ngSubmit)="submit(jobStoryForm.value)">
+    <div class="cohort">
+      <div class="form-group cohortyr">
+        <label for="firstname">Cohort</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Cohort(0000)</mat-label>
+          <input formControlName="cohort" matInput>
+        </mat-form-field>
+      </div>
+      <div class="form-group cohortpro">
+        <label for="role">Program?</label>
+        <mat-form-field appearance="outline">
+          <mat-label>BE/FE</mat-label>
+          <mat-select formControlName="program">
+            <mat-option value="FE">FE</mat-option>
+            <mat-option value="BE">BE</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+   </div>
     <div class="form-group">
-      <label for="firstname">Cohort</label>
-      <mat-form-field appearance="fill">
-        <mat-label>Cohort(xxxx)</mat-label>
-        <input required matInput>
-      </mat-form-field>
-    </div>
-    <div class="form-group">
-      <label for="firstname">Name</label>
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input required matInput>
-      </mat-form-field>
-    </div>
-    <div class="form-group">
-      <label for="lastname">Do you have a job?</label>
-      <mat-form-field appearance="fill">
-        <mat-label>Y/N</mat-label>
-        <mat-select required>
-          <mat-option value="yes">Yes</mat-option>
-          <mat-option value="no">Not Yet</mat-option>
-        </mat-select>
+      <label for="firstname">Full Name</label>
+      <mat-form-field appearance="outline">
+        <mat-label>First Last</mat-label>
+        <input formControlName="name" matInput>
       </mat-form-field>
     </div>
     <div class="form-group">
       <label for="role">Is it Permanent?</label>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Options</mat-label>
-        <mat-select required>
-          <mat-option value="Employee">Permanent Position</mat-option>
+        <mat-select formControlName="permanent">
+          <mat-option value="Employee">Employee</mat-option>
           <mat-option value="Intern">Internship</mat-option>
           <mat-option value="Apprenticeship">Apprenticeship</mat-option>
         </mat-select>
@@ -38,29 +40,29 @@
     </div>
     <div class="form-group">
       <label for="summary">Title</label>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Title</mat-label>
-        <input required matInput>
+        <input formControlName="title" matInput>
       </mat-form-field>
     </div>
     <div class="form-group">
       <label for="summary">Company</label>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Company</mat-label>
-        <input required matInput>
+        <input formControlName="company" matInput>
       </mat-form-field>
     </div>
     <div class="form-group">
       <label for="summary">How?</label>
-      <mat-form-field appearance="fill">
+      <mat-form-field appearance="outline">
         <mat-label>Options</mat-label>
-        <mat-select required>
+        <mat-select formControlName="effectiveChanel">
           <mat-option value="Personal Connection">Friend / Family</mat-option>
           <mat-option value="Alumni Referral">Alumni Referral</mat-option>
           <mat-option value="Cold Apply">Cold Apply</mat-option>
         </mat-select>
       </mat-form-field>
     </div>
-    <button class="btn">Submit</button>
+    <button [disabled]="jobStoryForm.invalid" mat-flat-button color="primary">Submit</button>
   </form>
 </div>

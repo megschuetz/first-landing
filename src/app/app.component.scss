@@ -1,20 +1,179 @@
+/* SCSS HEX */
+$periwinkle: #CBCBFFff;
+$tropical-indigo: #7D7DFBff;
+$white: #FFFFFFff;
+$risd-blue: #5551FF;
+$mint: #00bd9dff;
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-right: linear-gradient(90deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-bottom: linear-gradient(180deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-left: linear-gradient(270deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-top-right: linear-gradient(45deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-bottom-right: linear-gradient(135deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-top-left: linear-gradient(225deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-bottom-left: linear-gradient(315deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+
+
 body {
   margin: 0;
   padding: 0;
   border: 5px solid black;
-  background-color: lightgoldenrodyellow;
+  background-color: $periwinkle;
 }
 
 * {
-  font-family: "Didot", serif;
+  font-family: "Hind-Light", sans-serif;
+}
+
+.landing-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 
 header {
-  background-color: aliceblue;
   padding: 20px;
+  height: 23vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-h1, h2, h3 {
-  font-family: "Didot", serif;
-  font-weight: bold;
+h1 {
+  font-family: 'Hind-Bold', sans-serif;
+  font-size: 150px;
+  padding-top: 55px;
+  color: $risd-blue;
 }
+
+h3 {
+  font-family: 'Hind-Light', sans-serif;
+  color: $risd-blue;
+  font-size: 25px;
+}
+
+h3:hover {
+  transform: scale(1.2);
+}
+
+.nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-self: flex-start;
+  width: 18vw;
+  padding-top: 10px;
+}
+
+
+.rocket-section {
+  text-align: center;
+  height: 55vh;
+}
+
+.rocket-img {
+  height: 75vh;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bottom-ribbon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  margin: 0px 30px 15px;
+}
+
+h2 {
+  font-family: 'Hind-Medium', sans-serif;
+  color: $risd-blue;
+  align-self: flex-end;
+  margin: 0px;
+}
+
+.buttons {
+  width: 25%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
+.action-btn {
+  border: none;
+  border-radius: 30px;
+  padding: 10px 20px;
+  color: $white;
+  background-color: $mint;
+  font-size: larger;
+}
+
+.action-btn:hover {
+  border: 2px solid $tropical-indigo;
+  background-color: transparent;
+  color: $tropical-indigo;
+}
+
+footer {
+  position: relative;
+  background-color: $risd-blue;
+  color: $white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  height: 30vh;
+  margin: 0px;
+}
+
+footer h1 {
+  color: $white;
+  font-size: 80px;
+  align-self: flex-start;
+}
+
+footer h2 {
+  color: $white;
+  align-self: flex-start;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 50%;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
+@font-face {
+  font-family: 'Hind-Light';
+  src: url('../assets/HindMaduraiFont/HindMadurai-Light.ttf');
+}
+
+@font-face {
+  font-family: 'Hind-Medium';
+  src: url('../assets/HindMaduraiFont/HindMadurai-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Hind-Bold';
+  src: url('../assets/HindMaduraiFont/HindMadurai-Bold.ttf');
+}
+
+
+
+
+
+

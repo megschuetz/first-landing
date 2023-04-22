@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from "@angular/common/http"
 
 import { AppRoutingModule } from './app-routing.module';
@@ -15,23 +15,27 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { IconsComponent } from './icons/icons.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstJobFormComponent,
-    GridViewComponent
+    GridViewComponent,
+    IconsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AgGridModule,
     BrowserAnimationsModule,
     MatSelectModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule 
   ],
   providers: [AlumniService],
   bootstrap: [AppComponent]

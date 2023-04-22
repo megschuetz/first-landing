@@ -17,6 +17,16 @@ form {
   width: 50%;
 }
 
+.cohort {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cohortyr, .cohortpro {
+  width: 48%
+}
+
 label {
   text-align: left;
   font-size: larger;
