@@ -5,6 +5,12 @@ $white: #FFFFFFff;
 $risd-blue: #5551FF;
 $mint: #00bd9dff;
 
+/* SCSS RGB */
+$periwinkle: rgba(203, 203, 255, 1);
+$tropical-indigo: rgba(125, 125, 251, 1);
+$white: rgba(255, 255, 255, 1);
+$risd-blue: rgba(85, 81, 255, 1);
+
 /* SCSS Gradient */
 $gradient-top: linear-gradient(0deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
 $gradient-right: linear-gradient(90deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
@@ -35,19 +41,39 @@ body {
   height: 100vh;
 }
 
-header {
+.full-size-header {
   padding: 20px;
+  padding-top: 40px;
   height: 23vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(203, 203, 255, 0);
+  background-color: white;
+  transition: 1.0s;
 }
+
+.scroll-size-header {
+  height: 6vh !important;
+  border-bottom: 1px solid rgba(203, 203, 255, .8);
+  padding-top: 20px;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
 
 h1 {
   font-family: 'Hind-Bold', sans-serif;
   font-size: 150px;
   padding-top: 55px;
   color: $risd-blue;
+  transition: 1.0s;
+}
+
+.smaller-text {
+  font-size: 50px;
+  padding-top: 15px;
 }
 
 h3 {
@@ -66,7 +92,9 @@ h3:hover {
   align-self: flex-start;
   width: 18vw;
   padding-top: 10px;
+  transition: 1.0s;
 }
+
 
 
 .rocket-section {
@@ -112,9 +140,9 @@ h2 {
 }
 
 .action-btn:hover {
-  border: 2px solid $tropical-indigo;
+  border: 2px solid $mint;
   background-color: transparent;
-  color: $tropical-indigo;
+  color: $mint;
 }
 
 footer {
