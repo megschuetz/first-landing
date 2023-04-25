@@ -23,7 +23,7 @@ import { IconsComponent } from './icons/icons.component';
     AppComponent,
     FirstJobFormComponent,
     GridViewComponent,
-    IconsComponent
+    IconsComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +35,7 @@ import { IconsComponent } from './icons/icons.component';
     MatSelectModule,
     MatFormFieldModule,
     MatInputModule,
-    MatButtonModule 
+    MatButtonModule, 
   ],
   providers: [AlumniService],
   bootstrap: [AppComponent]
