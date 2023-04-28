@@ -1,31 +1,14 @@
-
-  <div class="landing-screen">
-    <header class="full-size-header">
-      <div class="header-content">
-        <h1>First Landing.</h1>
+<div class="app">
+  <div class="header-content">
+     <header class="end-transition-header">
+        <h1 class="smaller-text" routerLink="">First Landing.</h1>
         <div class="nav">
           <h3>Discover</h3>
-          <h3>Analytics</h3>
+          <h3 routerLink="grid">Analytics</h3>
         </div>
-      </div>
-    </header>
-    <section class="rocket-section">
-      <img class="rocket-img" src="../assets/purple rocket.gif" alt="cartoon rocket image" />
-    </section>
-    <section class="bottom-ribbon">
-      <h2>How people land their first dev jobs!</h2>
-      <div class="buttons">
-        <button class="action-btn">Read Stories</button>
-        <button class="action-btn">Write Yours</button>
-      </div>
-    </section>
-    <!-- <app-first-job-form>
-      
-    </app-first-job-form>
-    <app-grid-view>
-      
-    </app-grid-view> -->
+     </header>
   </div>
+  <router-outlet></router-outlet>
   <footer>
     <h1>First Landing.</h1>
     <section class="footer-links">
@@ -41,3 +24,4 @@
       </div>
     </section>
   </footer>
+</div>
