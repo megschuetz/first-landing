@@ -1,9 +1,9 @@
 <div class="container">
-  <h2>Your Story</h2>
+  <h2 class="form-prompt">Your Info, Pretty Please.</h2>
   <form [formGroup]="jobStoryForm" (ngSubmit)="submit(jobStoryForm.value)">
     <div class="cohort">
       <div class="form-group cohortyr">
-        <label for="firstname">Cohort</label>
+        <label for="cohort">Cohort</label>
         <mat-form-field appearance="outline">
           <mat-label>Cohort(0000)</mat-label>
           <input formControlName="cohort" matInput>
@@ -20,13 +20,22 @@
         </mat-form-field>
       </div>
    </div>
-    <div class="form-group">
-      <label for="firstname">Full Name</label>
-      <mat-form-field appearance="outline">
-        <mat-label>First Last</mat-label>
-        <input formControlName="name" matInput>
-      </mat-form-field>
-    </div>
+   <div class="full-name">
+     <div class="form-group first-name">
+       <label for="firstName">First Name</label>
+       <mat-form-field appearance="outline">
+         <mat-label>First Last</mat-label>
+         <input formControlName="firstName" matInput>
+       </mat-form-field>
+     </div>
+     <div class="form-group last-name">
+       <label for="lastName">Last Name</label>
+       <mat-form-field appearance="outline">
+         <mat-label>First Last</mat-label>
+         <input formControlName="lastName" matInput>
+       </mat-form-field>
+     </div>
+   </div>
     <div class="form-group">
       <label for="role">Is it Permanent?</label>
       <mat-form-field appearance="outline">
@@ -39,7 +48,7 @@
       </mat-form-field>
     </div>
     <div class="form-group">
-      <label for="summary">Title</label>
+      <label for="title">Title</label>
       <mat-form-field appearance="outline">
         <mat-label>Title</mat-label>
         <input formControlName="title" matInput>
@@ -53,7 +62,7 @@
       </mat-form-field>
     </div>
     <div class="form-group">
-      <label for="summary">How?</label>
+      <label for="summary">Chanel</label>
       <mat-form-field appearance="outline">
         <mat-label>Options</mat-label>
         <mat-select formControlName="effectiveChanel">
@@ -61,6 +70,28 @@
           <mat-option value="Alumni Referral">Alumni Referral</mat-option>
           <mat-option value="Cold Apply">Cold Apply</mat-option>
         </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="summary">Starting Salary</label>
+      <mat-form-field appearance="outline">
+        <mat-label>Options</mat-label>
+        <mat-select formControlName="startingSalary">
+          <mat-option value="50k - 60k">50k - 60k</mat-option>
+          <mat-option value="60k - 70k">60k - 70k</mat-option>
+          <mat-option value="70k - 80k">70k - 80k</mat-option>
+          <mat-option value="80k - 90k">80k - 90k</mat-option>
+          <mat-option value="90k - 100k">90k - 100k</mat-option>
+          <mat-option value="100k +">100k +</mat-option>        
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <br>
+    <h2 class="form-prompt">Now, let's get to the tea - spill it!</h2>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>The story of how you landed your first dev role.</mat-label>
+        <textarea matInput formControlName="storyResponse"></textarea>
       </mat-form-field>
     </div>
     <button [disabled]="jobStoryForm.invalid" mat-flat-button color="primary">Submit</button>

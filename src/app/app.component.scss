@@ -23,10 +23,11 @@ $gradient-bottom-left: linear-gradient(315deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, 
 $gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
 
 
-body {
+html, body {
   margin: 0;
   padding: 0;
-  border: 5px solid black;
+  height: 100%;
+  width: 100%;
   background-color: $periwinkle;
 }
 
@@ -37,42 +38,35 @@ body {
 
 
 .start-transition-header {
-  padding: 20px;
-  padding-top: 40px;
+  padding-top: 30px;
   height: 23vh;
   border-bottom: 1px solid rgba(203, 203, 255, 0);
   background-color: white;
   transition: 1.0s;
-  z-index: 999;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95vw;
+  padding-left: 35px;
+  padding-right: 35px;
 }
 
 .end-transition-header {
+  padding: 20px;
+  padding-top: 20px;
   height: 6vh !important;
   border-bottom: 1px solid rgba(203, 203, 255, .8);
   background-color: white;
-  padding: 20px;
-  padding-top: 20px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 95vw;
 }
 
 .header-content {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: center;
-  // width: 95vw;
   height: 23vh;
   position: sticky;
   top: 0;
-  width: 100vw;
   z-index: 999;
 }
 

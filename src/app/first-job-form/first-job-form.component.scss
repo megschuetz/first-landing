@@ -1,9 +1,20 @@
 .container {
-  margin-bottom: 10px;
-  margin-top: 20px;
+  margin-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h2 {
+  font-family: 'Hind-Medium', sans-serif;
+}
+
+.form-prompt {
+  margin-bottom: 50px;
+}
+
+textarea {
+  height: 300px;
 }
 
 .form-group {
@@ -17,13 +28,14 @@ form {
   width: 50%;
 }
 
-.cohort {
+.cohort, .full-name {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
-.cohortyr, .cohortpro {
+.cohortyr, .cohortpro,
+.first-name, .last-name {
   width: 48%
 }
 
@@ -31,11 +43,6 @@ label {
   text-align: left;
   font-size: larger;
   margin-bottom: 5px;
-}
-
-h2 {
-  font-family: "Didot", serif;
-  font-weight: bold;
 }
 
 .ag-hidden {

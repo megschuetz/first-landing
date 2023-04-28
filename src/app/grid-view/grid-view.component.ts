@@ -26,12 +26,14 @@ export class GridViewComponent implements OnInit {
 
   columnDefs: ColDef[] = [
     { headerName: "Cohort", width:120, valueGetter: ({ data }) => `${data.cohort} ${data.program}`},
-    { headerName: "Name", field:"name", },
+    { headerName: "Name", valueGetter: ({ data }) => `${data.firstName} ${data.lastName}` },
     { headerName: "Status", field: "permanent", filter: false, width:100, cellRenderer: IconsComponent },
     { headerName: "Permanent", field: "permanent"},
     { headerName: "Title", field: "title"},
     { headerName: "Company", field: "company"},
     { headerName: "How", field: "effectiveChanel"},
+    { headerName: "Month Hired", field: "monthHired"},
+    { headerName: "Salary", field: "startingSalary"},
   ]
 
   defaultColDef: ColDef = {

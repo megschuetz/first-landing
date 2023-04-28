@@ -15,7 +15,8 @@ export class FirstJobFormComponent implements OnInit {
     this.jobStoryForm = this.userStory.group({
       cohort: [null, [Validators.required, Validators.minLength(4)]],
       program: [null, [Validators.required]],
-      name: [null, [Validators.required, Validators.minLength(2)]],
+      firstName: [null, [Validators.required, Validators.minLength(2)]],
+      lastName: [null, [Validators.required, Validators.minLength(2)]],
       permanent: [null, [Validators.required]],
       title: [null, [Validators.required, Validators.minLength(5)]],
       company: [null, [Validators.required, Validators.minLength(2)]],

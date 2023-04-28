@@ -36,12 +36,12 @@ export class LandingPageComponent implements OnInit {
       }
   }
 
- ngOnDestroy() {
-  const title = document.querySelector('h1')
-  title?.classList.add('smaller-text')
+  ngOnDestroy() {
+    const title = document.querySelector('h1')
+    title?.classList.add('smaller-text')
 
-  const header = document.querySelector('header')
-  header?.classList.remove('start-transition-header')
-  header?.classList.add('end-transition-header')
- }
+    const header = document.querySelector('header')
+    header?.classList.remove('start-transition-header')
+    header?.classList.add('end-transition-header')
+  }
 }
