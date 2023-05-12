@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { AlumniService } from '../alumni.service';
-import { IAlumni } from '../interfaces/alumni';
+import { AlumniService } from '../../alumni.service';
+import { IAlumni } from '../../interfaces/alumni';
 import { ColDef, GridApi, GridOptions, SideBarDef } from 'ag-grid-community';
 import { Grid } from '@ag-grid-community/all-modules';
 import "ag-grid-enterprise";
-import { IconsComponent } from '../icons/icons.component';
+import { IconsComponent } from '../../icons/icons.component';
 
 @Component({
   selector: 'app-grid-view',

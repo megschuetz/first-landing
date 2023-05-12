@@ -1,0 +1,17 @@
+<div class="feed-container">
+    <section class="feed">
+        <div class="feed-entry" *ngFor="let story of allStories">
+            <div class="entry-header">
+                
+                <div class="comp-details">
+                    <h3 class="company">{{story.company}}</h3>
+                    <h4>{{story.title}}</h4>
+                </div>
+            </div>
+            <p class="story">{{story.storyResponse}}</p>
+            <p>{{story.startingSalary}}</p>
+            <p class="month">{{story.monthHired}}</p>
+            <h2 class="name">{{story.firstName}} {{story.lastName}}</h2>
+        </div>
+    </section>
+</div>

@@ -7,9 +7,9 @@ import { AgGridModule } from 'ag-grid-angular';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
-import { FirstJobFormComponent } from './first-job-form/first-job-form.component';
-import { GridViewComponent } from './grid-view/grid-view.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { FirstJobFormComponent } from './components/first-job-form/first-job-form.component';
+import { GridViewComponent } from './components/grid-view/grid-view.component';
+import { LandingPageComponent } from './components/landing-page/landing-page.component';
 
 import { AlumniService } from './alumni.service';
 
@@ -18,6 +18,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { IconsComponent } from './icons/icons.component';
+import { StoriesFeedComponent } from './components/stories-feed/stories-feed.component';
 
 
 @NgModule({
@@ -27,6 +28,7 @@ import { IconsComponent } from './icons/icons.component';
     GridViewComponent,
     IconsComponent,
     LandingPageComponent,
+    StoriesFeedComponent,
   ],
   imports: [
     BrowserModule,
