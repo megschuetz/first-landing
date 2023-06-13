@@ -1,0 +1,20 @@
+h1 {
+  font-family: 'Hind-Bold', sans-serif;
+  font-size: 11vw;
+  color: var(--risd-blue);
+  transition: 1.0s;
+}
+
+h3 {
+  font-family: 'Hind-Light', sans-serif;
+  color: var(--risd-blue);
+  font-size: 25px;
+  margin-left: 8px;
+}
+
+.header-content {
+  height: auto;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}

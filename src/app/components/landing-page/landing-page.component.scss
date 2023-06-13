@@ -11,9 +11,14 @@ $tropical-indigo: rgba(125, 125, 251, 1);
 $white: rgba(255, 255, 255, 1);
 $risd-blue: rgba(85, 81, 255, 1);
 
+
 .landing-page {
   margin-top: 20px;
   height: calc((100vh - 23vh) - 20px);
+}
+
+h2 {
+  color: $risd-blue
 }
 
 .rocket-section {

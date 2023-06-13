@@ -1,5 +1,5 @@
 <div class="container">
-  <h2 class="form-prompt">Your Info, Pretty Please.</h2>
+  <p class="form-prompt">Your Info, Pretty Please.</p>
   <form [formGroup]="jobStoryForm" (ngSubmit)="submit(jobStoryForm.value)">
     <div class="cohort">
       <div class="form-group cohortyr">
@@ -87,13 +87,13 @@
       </mat-form-field>
     </div>
     <br>
-    <h2 class="form-prompt">Now, let's get to the tea - spill it!</h2>
+    <p class="form-prompt">Now, let's get to the tea - spill it!</p>
     <div class="form-group">
       <mat-form-field appearance="outline">
         <mat-label>The story of how you landed your first dev role.</mat-label>
         <textarea matInput formControlName="storyResponse"></textarea>
       </mat-form-field>
     </div>
-    <button [disabled]="jobStoryForm.invalid" mat-flat-button color="primary">Submit</button>
+    <button [disabled]="jobStoryForm.invalid" mat-flat-button color="primary" (click)="submitForm()">Review</button>
   </form>
 </div>

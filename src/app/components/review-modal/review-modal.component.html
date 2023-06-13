@@ -1,0 +1,37 @@
+<div class="review-modal-container">
+  <h2>Review Your Responses</h2>
+  <section class="review-info">
+    <div class="entry">
+      <p class="label">Name: </p>
+      <p class="value">{{formInfo.firstName}} {{formInfo.lastName}}</p>
+    </div>
+    <div class="entry">
+      <p class="label">Cohort: </p>
+      <p class="value">{{formInfo.cohort}} {{formInfo.program}}</p>
+    </div>
+    <div class="entry">
+      <p class="label">Title: </p>
+      <p class="value">{{formInfo.title}}</p>
+    </div>
+    <div class="entry">
+      <p class="label">Chanel: </p>
+      <p class="value">{{formInfo.effectiveChanel}}</p>
+    </div>
+    <div class="entry">
+      <p class="label">Salary: </p>
+      <p class="value">{{formInfo.startingSalary}}</p>
+    </div>
+    <div class="entry">
+      <p class="label">Company: </p>
+      <p class="value">{{formInfo.company}}</p>
+    </div>
+  </section>
+  <section class="review-story">
+    <div class="entry">
+      <p class="label">Story Response: </p>
+      <p class="value">{{formInfo.storyResponse}}</p>
+    </div>  
+  </section>
+  <button class="bk-btn" mat-raised-button color="accent" mat-dialog-close>Back</button>
+  <button mat-raised-button color="accent" (click)="onClose()">Submit</button>
+</div>

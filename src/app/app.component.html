@@ -1,5 +1,5 @@
 <div class="app">
-  <div class="header-content">
+  <div *ngIf="showAnimateHeader" class="header-content">
      <header class="end-transition-header">
         <h1 class="smaller-text" routerLink="">First Landing.</h1>
         <div class="nav">
@@ -8,7 +8,8 @@
         </div>
      </header>
   </div>
-  <router-outlet></router-outlet>
+  <app-short-header *ngIf="showStickyHeader"></app-short-header>
+  <router-outlet (activate)="onActivate()"></router-outlet>
   <footer>
     <h1>First Landing.</h1>
     <section class="footer-links">

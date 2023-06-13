@@ -9,13 +9,17 @@ import { AlumniService } from '../../alumni.service';
 })
 export class StoriesFeedComponent implements OnInit {
 
-  public allStories: IAlumni[] = []
-
+  public allStories: IAlumni[] = [];
+  public isLoading: boolean = true;
+  
   constructor(private alumniService: AlumniService) { }
 
-  ngOnInit(): void {
-    this.alumniService.getAlumni()
-      .subscribe(data => this.allStories = data)
+  ngOnInit(): void { 
+      this.alumniService.getAlumni()
+        .subscribe(data => {
+          this.allStories = data
+          this.isLoading = false
+        })
   }
 
 }

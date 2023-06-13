@@ -1,17 +1,27 @@
-<div class="feed-container">
+<div *ngIf="isLoading" class="loading-container">
+    <mat-spinner color="primary"></mat-spinner>
+</div>
+<div *ngIf="allStories" class="feed-container">
     <section class="feed">
         <div class="feed-entry" *ngFor="let story of allStories">
             <div class="entry-header">
                 
                 <div class="comp-details">
-                    <h3 class="company">{{story.company}}</h3>
-                    <h4>{{story.title}}</h4>
+                    <h2 class="company">{{story.company}}</h2>
+                    <h2>{{story.title}}</h2>
                 </div>
             </div>
             <p class="story">{{story.storyResponse}}</p>
-            <p>{{story.startingSalary}}</p>
-            <p class="month">{{story.monthHired}}</p>
-            <h2 class="name">{{story.firstName}} {{story.lastName}}</h2>
+            <section class="feed-footer">
+                <div>
+                    <p class="salary">{{story.startingSalary}}</p>
+                    <p class="month">{{story.monthHired}}</p>
+                </div>
+                <div class="background">
+                    <h3 class="name">{{story.firstName}} {{story.lastName}}</h3>
+                    <p>{{story.cohort}} {{story.program}}</p>
+                </div>
+            </section>
         </div>
     </section>
 </div>

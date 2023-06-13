@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
 import { Dot, Mouse } from './helpers/dot-helper'
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -8,14 +9,26 @@ import { Dot, Mouse } from './helpers/dot-helper'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'first-landing';
+
+  showAnimateHeader: boolean = true;
+  showStickyHeader: boolean = false; 
+  title: string = 'first-landing';
   dots: Dot[] = []
   mouse: Mouse = {
     x: 0,
     y: 0
   }
 
-  constructor(public element: ElementRef) { }
+  constructor(public element: ElementRef, private router: Router) { }
+
+  onActivate() {
+    console.log('on Active here')
+    window.scrollTo(0,0)
+    console.log('should have scrolled to top')
+    if(this.router.url.length > 1) { this.showAnimateHeader = false; this.showStickyHeader = true }
+    if(this.router.url.length == 1) { this.showAnimateHeader = true; this.showStickyHeader = false }
+  }
+
 
   @HostListener("mousemove", ['$event'])
    onMouseMove(event: MouseEvent) {

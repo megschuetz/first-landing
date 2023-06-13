@@ -4,10 +4,14 @@ $white: #FFFFFFff;
 $risd-blue: #5551FF;
 $mint: #00bd9dff;
 
-
+.loading-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+}
 
 .feed-container {
-  width: 100%;
+  padding: 40px;
   display: flex;
   justify-content: center;
 }
@@ -15,7 +19,7 @@ $mint: #00bd9dff;
 .feed {
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 45%;
 }
 
 .feed-entry {
@@ -36,7 +40,17 @@ $mint: #00bd9dff;
 }
 
 .story {
-  font-size: x-large;
+  font-size: larger;
+}
+
+.feed-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.background {
+  text-align: right;
 }
 
 .month {
@@ -47,6 +61,11 @@ $mint: #00bd9dff;
   color: $risd-blue;
 }
 
+.salary {
+  color: $mint;
+}
+
 .name {
   justify-self: end;
+  margin-bottom: 5px;
 }

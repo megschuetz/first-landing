@@ -23,20 +23,6 @@ $gradient-bottom-left: linear-gradient(315deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, 
 $gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
 
 
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  background-color: $periwinkle;
-}
-
-* {
-  font-family: "Hind-Light", sans-serif;
-  color: $risd-blue;
-}
-
-
 .start-transition-header {
   padding-top: 30px;
   height: 23vh;
@@ -105,7 +91,6 @@ h3:hover {
 
 h2 {
   font-family: 'Hind-Medium', sans-serif;
-  color: $risd-blue;
   align-self: flex-end;
   margin: 0px;
 }
@@ -171,6 +156,11 @@ footer h1 {
 @font-face {
   font-family: 'Hind-Bold';
   src: url('../assets/HindMaduraiFont/HindMadurai-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Hind-SemiBold';
+  src: url('../assets/HindMaduraiFont/HindMadurai-SemiBold.ttf');
 }
 
 
