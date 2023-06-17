@@ -1,0 +1,21 @@
+.btn-container {
+  margin: 10px;
+}
+
+.primary-btn {
+  border: none;
+  border-radius: 30px;
+  color: var(--white);
+  background-color: var(--mint);
+}
+
+.medium {
+  padding:10px 20px;
+  font-size: larger;
+}
+
+.primary-btn:hover {
+  border: 2px solid var(--mint);
+  background-color: transparent;
+  color: var(--mint);
+}

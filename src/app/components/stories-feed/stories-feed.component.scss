@@ -1,25 +1,7 @@
-$periwinkle: #CBCBFFff;
-$tropical-indigo: #7D7DFBff;
-$white: #FFFFFFff;
-$risd-blue: #5551FF;
-$mint: #00bd9dff;
-
-.loading-container {
-  height: 80vh;
-  display: flex;
-  justify-content: center;
-}
-
-.feed-container {
-  padding: 40px;
-  display: flex;
-  justify-content: center;
-}
-
 .feed {
   display: flex;
   flex-direction: column;
-  width: 45%;
+  padding: 0px 50px;
 }
 
 .feed-entry {
@@ -54,15 +36,15 @@ $mint: #00bd9dff;
 }
 
 .month {
-  border: 1px solid $risd-blue;
+  border: 1px solid var(--risd-blue);
   border-radius: 20px;
   padding: 2px 10px;
   display: inline;
-  color: $risd-blue;
+  color: var(--risd-blue);
 }
 
 .salary {
-  color: $mint;
+  color: var(--mint);
 }
 
 .name {

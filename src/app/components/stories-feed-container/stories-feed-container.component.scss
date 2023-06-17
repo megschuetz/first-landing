@@ -1,0 +1,25 @@
+.loading-container {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feed-container {
+  margin: 40px;
+  display: grid;
+  grid-column-gap: 50px;
+  grid-template-columns: 15% 60% 15%;
+}
+
+.filters{
+  display: flex;
+  flex-direction: column;
+}
+
+.pos-end {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+}
+

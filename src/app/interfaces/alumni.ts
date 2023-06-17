@@ -10,4 +10,6 @@ export interface IAlumni {
   monthHired: string,
   startingSalary: string,
   storyResponse: string,
+
+  [key: string]: any;
 }

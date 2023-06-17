@@ -1,25 +1,19 @@
-import { Component, OnInit } from '@angular/core';
-import { IAlumni } from '../../interfaces/alumni';
-import { AlumniService } from '../../alumni.service';
+import { Component, OnInit, Input } from '@angular/core';
+import { IAlumni } from 'src/app/interfaces/alumni';
+import { SearchFilterPipe } from 'src/app/pipes/search-filter.pipe';
 
 @Component({
   selector: 'app-stories-feed',
   templateUrl: './stories-feed.component.html',
   styleUrls: ['./stories-feed.component.scss']
 })
-export class StoriesFeedComponent implements OnInit {
+export class StoriesFeedComponent implements OnInit  {
+  @Input() allStories: IAlumni[] = [];
+  @Input() searchTerm: string = '';
 
-  public allStories: IAlumni[] = [];
-  public isLoading: boolean = true;
-  
-  constructor(private alumniService: AlumniService) { }
+  constructor() { }
 
-  ngOnInit(): void { 
-      this.alumniService.getAlumni()
-        .subscribe(data => {
-          this.allStories = data
-          this.isLoading = false
-        })
+  ngOnInit() {
+    console.log(this.searchTerm)
   }
-
 }

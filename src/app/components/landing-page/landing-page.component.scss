@@ -42,21 +42,7 @@ h2 {
 .buttons {
   width: 25%;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
 }
 
 
-.action-btn {
-  border: none;
-  border-radius: 30px;
-  padding: 10px 20px;
-  color: $white;
-  background-color: $mint;
-  font-size: larger;
-}
-
-.action-btn:hover {
-  border: 2px solid $mint;
-  background-color: transparent;
-  color: $mint;
-}

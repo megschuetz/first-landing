@@ -41,7 +41,7 @@ export class AppComponent implements OnInit {
     for (let i = 0; i < 8; i++) {
       const d = new Dot();
       this.dots.push(d);
-      //this.element.nativeElement.appendChild(d.node);
+      this.element.nativeElement.appendChild(d.node);
     }
 
     const animate = () => {
@@ -49,7 +49,7 @@ export class AppComponent implements OnInit {
       requestAnimationFrame(animate);
     };
 
-    //animate();
+   //animate();
   }
 
   draw() {

@@ -1,0 +1,25 @@
+<div *ngIf="isLoading" class="loading-container">
+    <mat-spinner color="primary"></mat-spinner>
+</div>
+<div *ngIf="!isLoading" class="feed-container">
+    <section class="filters">
+        <p>Filter</p>
+        <mat-form-field appearance="outline">
+            <mat-label>Company</mat-label>
+<!-- #companySelect is variable used to omit the use of .event.target.value now companySelect.value-->
+            <mat-select #companySelect> 
+                <mat-select-trigger>{{companySelect.value}}</mat-select-trigger>
+                <mat-option *ngFor="let company of allStories" [value]="company.company">
+                  <div class="country-container">
+                    <span>{{company.company}}</span>
+                  </div>
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </section>
+    <app-stories-feed [allStories]="allStories" [searchTerm]="searchTerm"></app-stories-feed>
+    <section class="filters">
+        <app-search-bar (setSearchTerm)="setSearchTerm($event)"></app-search-bar>
+        <app-button class="pos-end" link="/form" size="medium" type="primary-btn" title="Write Yours"></app-button>
+    </section>
+</div>
