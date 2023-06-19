@@ -14,6 +14,7 @@ import { IconsComponent } from '../../icons/icons.component';
 export class GridViewComponent implements OnInit {
 
   public rowData: IAlumni[] = []
+  public loading: boolean = true;
 
   constructor(private alumniService: AlumniService) {
 
@@ -21,7 +22,11 @@ export class GridViewComponent implements OnInit {
 
   ngOnInit(): void {
     this.alumniService.getAlumni()
-      .subscribe(data => this.rowData = data)
+      .subscribe(data => data.forEach(alum => {
+        this.rowData.push(alum) 
+        this.loading = false
+      }))
+    this.alumniService.getAddedAlumni().forEach(alum => this.rowData.push(alum))
   }
 
   columnDefs: ColDef[] = [

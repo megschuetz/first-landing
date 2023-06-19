@@ -9,13 +9,32 @@
   background-color: var(--mint);
 }
 
+.outline-btn {
+  border: 2px solid var(--mint);
+  border-radius: 30px;
+  background-color: transparent;
+  color: var(--mint);
+}
+
 .medium {
   padding:10px 20px;
   font-size: larger;
+}
+
+.medium-round {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .primary-btn:hover {
   border: 2px solid var(--mint);
   background-color: transparent;
   color: var(--mint);
+}
+
+.outline-btn:hover {
+  color: var(--white);
+  background-color: var(--mint);
 }

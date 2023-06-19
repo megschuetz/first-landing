@@ -4,33 +4,35 @@ import { MatDialog } from '@angular/material/dialog';
 import { ReviewModalComponent } from '../review-modal/review-modal.component';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-first-job-form',
   templateUrl: './first-job-form.component.html',
   styleUrls: ['./first-job-form.component.scss']
 })
+
 export class FirstJobFormComponent implements OnInit {
+  public months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
   jobStoryForm: FormGroup = new FormGroup({})
 
-  constructor(private userStory: FormBuilder, public matdialog: MatDialog, private router: Router) { }
+  constructor(private userStory: FormBuilder, 
+    public matdialog: MatDialog, 
+    private router: Router) { }
 
   ngOnInit(): void {
     this.jobStoryForm = this.userStory.group({
-      cohort: [null, [ Validators.minLength(4)]],
+      cohort: [null, [Validators.required, Validators.minLength(4)]],
       program: [null, [Validators.required]],
-      firstName: [null, [ Validators.minLength(2)]],
-      lastName: [null, [ Validators.minLength(2)]],
-      permanent: [null, []],
+      firstName: [null, [Validators.required, Validators.minLength(2)]],
+      lastName: [null, [Validators.required, Validators.minLength(2)]],
+      permanent: [null, [Validators.required]],
       title: [null, [ Validators.minLength(5)]],
       company: [null, [Validators.minLength(2)]],
-      effectiveChanel: [null, []],
-      startingSalary: [null],
-      storyResponse: [null],
+      effectiveChanel: [null, [Validators.required]],
+      monthHired: [null, [Validators.required]],
+      startingSalary: [null, [Validators.required]],
+      storyResponse: [null, [Validators.required]],
     })
-  }
-
-  submit(userStory:any) {
-    console.log('here', userStory)
   }
 
   // validCohort(control: FormControl) {
@@ -52,10 +54,14 @@ export class FirstJobFormComponent implements OnInit {
   getCohort () { return this.jobStoryForm.get('cohort')}
 
   submitForm() {
-    this.matdialog.open(ReviewModalComponent, {
+    const dialogRef = this.matdialog.open(ReviewModalComponent, {
       width: '40%',
       height: '80%',
       data: this.jobStoryForm.value
+    })
+    dialogRef.afterClosed().subscribe(result => {
+      if(!result) return;
+      this.router.navigate(['feed'])
     })
   }
 

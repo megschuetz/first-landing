@@ -18,11 +18,11 @@ export class SearchBarComponent implements OnInit {
   ngOnInit(): void {
     this.searchForm = this.formBuilder.group({
       search: '',
-    })
+    });
   }
 
   emit(search: string) {
-    this.setSearchTerm.emit(search)
+    this.setSearchTerm.emit(search);
   }
 
 }

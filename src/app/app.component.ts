@@ -22,9 +22,8 @@ export class AppComponent implements OnInit {
   constructor(public element: ElementRef, private router: Router) { }
 
   onActivate() {
-    console.log('on Active here')
+    console.log('router outlet changed')
     window.scrollTo(0,0)
-    console.log('should have scrolled to top')
     if(this.router.url.length > 1) { this.showAnimateHeader = false; this.showStickyHeader = true }
     if(this.router.url.length == 1) { this.showAnimateHeader = true; this.showStickyHeader = false }
   }

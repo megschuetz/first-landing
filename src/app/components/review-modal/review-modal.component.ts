@@ -1,7 +1,6 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, Output } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { IAlumni } from 'src/app/interfaces/alumni';
-import { Router } from '@angular/router';
+import { AlumniService } from 'src/app/alumni.service';
 
 @Component({
   selector: 'app-key-modal',
@@ -10,21 +9,21 @@ import { Router } from '@angular/router';
 })
 export class ReviewModalComponent implements OnInit {
 
-  formInfo!: IAlumni;
+  formInfo!: any;
   
   constructor(
     public dialogRef: MatDialogRef<ReviewModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private router: Router) { }
+    private alumniService: AlumniService ) { }
 
 
   ngOnInit(): void {
     this.formInfo = this.data
   }
 
-  async onClose() {
-   this.dialogRef.close()
-   await this.router.navigate(['feed'])
+  onClose() {
+   this.dialogRef.close(true)
+   this.alumniService.setAlumni(this.formInfo)
   }
 
 }

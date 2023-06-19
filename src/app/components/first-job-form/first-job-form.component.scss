@@ -26,14 +26,15 @@ form {
   width: 50%;
 }
 
-.cohort, .full-name {
+.cohort, .full-name, .time-n-pay {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
 
 .cohortyr, .cohortpro,
-.first-name, .last-name {
+.first-name, .last-name,
+.month-hired, .starting-sal {
   width: 48%
 }
 

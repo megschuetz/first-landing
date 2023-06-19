@@ -1,5 +1,5 @@
 .loading-container {
-  height: 80vh;
+  height: 85vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,4 +22,20 @@
   bottom: 0.5rem;
   right: 0.5rem;
 }
+
+.pos-start {
+  position: fixed;
+  bottom: 0.5rem;
+  left: 0.5rem;
+}
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
 

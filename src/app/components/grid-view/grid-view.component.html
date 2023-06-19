@@ -1,5 +1,4 @@
-<div class="grid-container">
-  
+<div class="grid-container" *ngIf="!loading">
   <ag-grid-angular
     class="ag-theme-alpine" 
     [rowData]="rowData"

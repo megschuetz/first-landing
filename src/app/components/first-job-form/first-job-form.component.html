@@ -1,6 +1,6 @@
 <div class="container">
   <p class="form-prompt">Your Info, Pretty Please.</p>
-  <form [formGroup]="jobStoryForm" (ngSubmit)="submit(jobStoryForm.value)">
+  <form [formGroup]="jobStoryForm">
     <div class="cohort">
       <div class="form-group cohortyr">
         <label for="cohort">Cohort</label>
@@ -36,6 +36,20 @@
        </mat-form-field>
      </div>
    </div>
+   <div class="form-group">
+     <label for="title">Title</label>
+     <mat-form-field appearance="outline">
+       <mat-label>Title</mat-label>
+       <input formControlName="title" matInput>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <label for="summary">Company</label>
+      <mat-form-field appearance="outline">
+        <mat-label>Company</mat-label>
+        <input formControlName="company" matInput>
+      </mat-form-field>
+    </div>
     <div class="form-group">
       <label for="role">Is it Permanent?</label>
       <mat-form-field appearance="outline">
@@ -45,20 +59,6 @@
           <mat-option value="Intern">Internship</mat-option>
           <mat-option value="Apprenticeship">Apprenticeship</mat-option>
         </mat-select>
-      </mat-form-field>
-    </div>
-    <div class="form-group">
-      <label for="title">Title</label>
-      <mat-form-field appearance="outline">
-        <mat-label>Title</mat-label>
-        <input formControlName="title" matInput>
-      </mat-form-field>
-    </div>
-    <div class="form-group">
-      <label for="summary">Company</label>
-      <mat-form-field appearance="outline">
-        <mat-label>Company</mat-label>
-        <input formControlName="company" matInput>
       </mat-form-field>
     </div>
     <div class="form-group">
@@ -72,25 +72,36 @@
         </mat-select>
       </mat-form-field>
     </div>
-    <div class="form-group">
-      <label for="summary">Starting Salary</label>
-      <mat-form-field appearance="outline">
-        <mat-label>Options</mat-label>
-        <mat-select formControlName="startingSalary">
-          <mat-option value="50k - 60k">50k - 60k</mat-option>
-          <mat-option value="60k - 70k">60k - 70k</mat-option>
-          <mat-option value="70k - 80k">70k - 80k</mat-option>
-          <mat-option value="80k - 90k">80k - 90k</mat-option>
-          <mat-option value="90k - 100k">90k - 100k</mat-option>
-          <mat-option value="100k +">100k +</mat-option>        
-        </mat-select>
-      </mat-form-field>
+    <div class="time-n-pay">
+      <div class="form-group starting-sal">
+        <label for="summary">Starting Salary</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Options</mat-label>
+          <mat-select formControlName="startingSalary">
+            <mat-option value="50k - 60k">50k - 60k</mat-option>
+            <mat-option value="60k - 70k">60k - 70k</mat-option>
+            <mat-option value="70k - 80k">70k - 80k</mat-option>
+            <mat-option value="80k - 90k">80k - 90k</mat-option>
+            <mat-option value="90k - 100k">90k - 100k</mat-option>
+            <mat-option value="100k +">100k +</mat-option>        
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="form-group month-hired">
+        <label for="monthHired">Month Hired</label>
+        <mat-form-field appearance="outline">
+          <mat-label>Options</mat-label>
+          <mat-select formControlName="monthHired">
+            <mat-option *ngFor="let month of months" value="{{month}}">{{month}}</mat-option>       
+          </mat-select>
+        </mat-form-field>
+      </div>
     </div>
     <br>
     <p class="form-prompt">Now, let's get to the tea - spill it!</p>
     <div class="form-group">
       <mat-form-field appearance="outline">
-        <mat-label>The story of how you landed your first dev role.</mat-label>
+        <mat-label>Copy and paste the story of how you landed your first dev role.</mat-label>
         <textarea matInput formControlName="storyResponse"></textarea>
       </mat-form-field>
     </div>

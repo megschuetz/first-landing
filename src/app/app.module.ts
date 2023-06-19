@@ -15,6 +15,7 @@ import { ShortHeaderComponent } from './components/short-header/short-header.com
 import { AlumniService } from './alumni.service';
 
 import { MatSelectModule } from '@angular/material/select';
+import { NgxMatSelectSearchModule } from 'ngx-mat-select-search';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
@@ -54,6 +55,7 @@ import { SearchFilterPipe } from './pipes/search-filter.pipe';
     AgGridModule,
     BrowserAnimationsModule,
     MatSelectModule,
+    NgxMatSelectSearchModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
