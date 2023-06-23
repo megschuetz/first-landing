@@ -1,5 +1,4 @@
 <div>
-  <p class="grid-title">Data Overview</p>
   <div class="stories-section">
     <section class="planet-section">
       <img class="planet-img" src="../assets/planet gif.gif" alt="cartoon planet image" />
@@ -8,6 +7,10 @@
       <p>{{storyToDisplay.storyResponse}}</p>
       <p> - {{storyToDisplay.firstName}} {{storyToDisplay.lastName}}</p>
     </div>
+  </div>
+  <div class="filter-icon">
+    <mat-icon>filter_alt</mat-icon>
+    <p class="filters">Filters:</p>
   </div>
   <div class="grid-container" *ngIf="!loading">
     <ag-grid-angular
