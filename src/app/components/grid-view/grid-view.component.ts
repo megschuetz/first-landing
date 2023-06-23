@@ -5,6 +5,8 @@ import { ColDef, GridApi, GridOptions, SideBarDef } from 'ag-grid-community';
 import { Grid } from '@ag-grid-community/all-modules';
 import "ag-grid-enterprise";
 import { IconsComponent } from '../../icons/icons.component';
+import { lastValueFrom } from 'rxjs';
+import { isNull } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-grid-view',
@@ -15,18 +17,18 @@ export class GridViewComponent implements OnInit {
 
   public rowData: IAlumni[] = []
   public loading: boolean = true;
+  public storyToDisplay: any = {};
 
   constructor(private alumniService: AlumniService) {
 
   }
 
-  ngOnInit(): void {
-    this.alumniService.getAlumni()
-      .subscribe(data => data.forEach(alum => {
-        this.rowData.push(alum) 
-        this.loading = false
-      }))
+  async ngOnInit() {
+    const currentAlumni = await lastValueFrom(this.alumniService.getAlumni())
+    currentAlumni.forEach(alumni => this.rowData.push(alumni))
     this.alumniService.getAddedAlumni().forEach(alum => this.rowData.push(alum))
+    this.storyToDisplay = this.rowData[0]
+    this.loading = false;
   }
 
   columnDefs: ColDef[] = [
@@ -62,4 +64,7 @@ export class GridViewComponent implements OnInit {
 
   public sideBar: SideBarDef | string | string[] | boolean | null = 'filters';
 
+  onRowClicked(event: any) {
+    this.storyToDisplay = event.data
+  }
 }

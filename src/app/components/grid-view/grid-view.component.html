@@ -1,12 +1,25 @@
-<div class="grid-container" *ngIf="!loading">
-  <ag-grid-angular
-    class="ag-theme-alpine" 
-    [rowData]="rowData"
-    [columnDefs]="columnDefs"
-    [defaultColDef]="defaultColDef"
-    (gridReady)="onGridReady($event)"
-    [sideBar]="sideBar"
-  >
-  </ag-grid-angular>
+<div>
+  <p class="grid-title">Data Overview</p>
+  <div class="stories-section">
+    <section class="planet-section">
+      <img class="planet-img" src="../assets/planet gif.gif" alt="cartoon planet image" />
+    </section>
+    <div class="selected-story">
+      <p>{{storyToDisplay.storyResponse}}</p>
+      <p> - {{storyToDisplay.firstName}} {{storyToDisplay.lastName}}</p>
+    </div>
+  </div>
+  <div class="grid-container" *ngIf="!loading">
+    <ag-grid-angular
+      class="ag-theme-alpine" 
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      (gridReady)="onGridReady($event)"
+      (rowClicked)="onRowClicked($event)"
+      [sideBar]="sideBar"
+    >
+    </ag-grid-angular>
+  </div>
 </div>
 

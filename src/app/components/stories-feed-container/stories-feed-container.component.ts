@@ -21,12 +21,11 @@ export class StoriesFeedContainerComponent implements OnInit {
       this.alumniService.getAlumni()
         .subscribe(data => {
           data.forEach(alum => this.allStories.push(alum))
-          
+          this.isLoading = false
         })  
         this.alumniService.getAddedAlumni().forEach((alum: IAlumni) => {
           this.allStories.push(alum)
         })
-        this.isLoading = false
     }, 500)
   }
 

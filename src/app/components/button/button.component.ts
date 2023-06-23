@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./button.component.scss']
 })
 
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
   @Input() link: any; 
   @Input() size: any;
   @Input() type: any;
@@ -17,16 +17,13 @@ export class ButtonComponent implements OnInit {
   
   constructor() { }
 
-  ngOnInit(): void { }
-
-  triggerAction(event: any, action: string) {
-    event.stopPropagation();
+  triggerAction(event: any, action: string) { 
     if(!action) {
       return;
     };
 
     switch(action) {
-      case 'windowTop': window.scrollTo(0,0); console.log('window scroll to');
+      case 'windowTop': window.scrollTo({top: 0, behavior: 'smooth'}); console.log('window scroll to');
     };
   }
 }

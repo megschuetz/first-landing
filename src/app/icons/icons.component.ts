@@ -29,7 +29,6 @@ export class IconsComponent implements ICellRendererAngularComp {
   }
 
   agInit(params: ICellRendererParams): void {
-    console.log('here', params.value);
     if(params.value === 'Internship') {
       this.internship = true
     } else if (params.value === 'Apprenticeship') {
