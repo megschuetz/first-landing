@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { FirstJobFormComponent } from './components/first-job-form/first-job-form.component';
 import { GridViewComponent } from './components/grid-view/grid-view.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
-import { StoriesFeedContainerComponent } from './components/stories-feed-container/stories-feed-container.component';
+import { StoriesFeedContainerComponent } from './components/discover/stories-feed-container/stories-feed-container.component';
 
 
 const routes: Routes = [

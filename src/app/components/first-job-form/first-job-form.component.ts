@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ValidationErrors, AbstractControl, ValidatorFn } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ReviewModalComponent } from '../review-modal/review-modal.component';
 import { Router } from '@angular/router';
@@ -13,15 +13,19 @@ import { Router } from '@angular/router';
 
 export class FirstJobFormComponent implements OnInit {
   public months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Aug', 'Sept', 'Oct', 'Nov', 'Dec'];
+  public salaries = ['50k - 60k', '60k - 70k', '70k - 80k', '80k - 90k', '90k - 100k', '100k +'];
   jobStoryForm: FormGroup = new FormGroup({})
 
-  constructor(private userStory: FormBuilder, 
+  constructor(
+    private userStory: FormBuilder, 
     public matdialog: MatDialog, 
-    private router: Router) { }
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    console.log('here')
     this.jobStoryForm = this.userStory.group({
-      cohort: [null, [Validators.required, Validators.minLength(4)]],
+      cohort: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4), this.validCohort]],
       program: [null, [Validators.required]],
       firstName: [null, [Validators.required, Validators.minLength(2)]],
       lastName: [null, [Validators.required, Validators.minLength(2)]],
@@ -35,23 +39,24 @@ export class FirstJobFormComponent implements OnInit {
     })
   }
 
-  // validCohort(control: FormControl) {
-  //   let validYear = ['17','18','19','20','21','22','23']
-  //   let validMonth = ['01','02','03','04','05','06','07','08','09','10','11','12']
+  validCohort (control: AbstractControl): ValidationErrors | null  {
+    const validYear = ['14', '15', '16', '17', '18', '19', '20', '21', '22', '23'];
+    const validMonth = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'];
 
-  //   let cohortInput = this.getCohort() 
-  //   console.log(cohortInput)
+    const cohortInput = control.value;
 
-  //   let year = cohortInput?.slice(2)
-  //   let month = cohortInput?.slice(0,2)
+    if (cohortInput?.length === 4) {
+      const year = cohortInput.slice(0, 2);
+      const month = cohortInput.slice(2);
 
-  //   if (control.value != null && validYear.includes(year) && validMonth.includes(month)) {
-  //     return {validCohort: true}
-  //   }
-  //   return null
-  // }
+      if (validYear.includes(year) && validMonth.includes(month)) {
+        return null; 
+      }
+    }
+    return { invalidCohort: true }; 
+  };
 
-  getCohort () { return this.jobStoryForm.get('cohort')}
+  getCohort(): AbstractControl | null { return this.jobStoryForm.get('cohort')}
 
   submitForm() {
     const dialogRef = this.matdialog.open(ReviewModalComponent, {

@@ -22,7 +22,15 @@ $gradient-top-left: linear-gradient(225deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #55
 $gradient-bottom-left: linear-gradient(315deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
 $gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
 
-
+::ng-deep {
+  .loading-container {
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+  
 .start-transition-header {
   padding-top: 30px;
   height: 23vh;
@@ -130,15 +138,6 @@ footer h1 {
 .footer-column > h2, a {
   color: $white;
   align-self: flex-start;
-}
-
-
-.trail { 
-  position: absolute;
-  height: 10px; width: 10px;
-  border-radius: 5px;
-  background: green;
-  z-index: 9999 !important;
 }
 
 

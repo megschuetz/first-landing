@@ -21,7 +21,7 @@ ag-grid-angular {
   --ag-foreground-color: #5551FF;
   --ag-header-foreground-color: #FFFFFFff;
   --ag-header-background-color: #5551FF;
-  --ag-subheader-background-color: rgba(85, 81, 255, .6);
+  --ag-subheader-background-color: #00bd9dff;
   --ag-border-color: #5551FF;
   --ag-row-border-color: rgba(203, 203, 255, .8);
   --ag-row-hover-color:rgba(85, 81, 255, .05);
@@ -72,5 +72,10 @@ ag-grid-angular {
   width: 55%;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 15px;
+}
+
+.selected-story > p {
+  font-size: 17px;
+  line-height: 23px;
 }
 

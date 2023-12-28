@@ -11,7 +11,7 @@ export class SearchBarComponent implements OnInit {
 
   search: any;
   searchForm: FormGroup = new FormGroup({});
-  @Output() setSearchTerm = new EventEmitter<string>();
+  @Output() passSearchTerm = new EventEmitter<string>();
 
   constructor(private formBuilder: FormBuilder) { }
 
@@ -22,7 +22,7 @@ export class SearchBarComponent implements OnInit {
   }
 
   emit(search: string) {
-    this.setSearchTerm.emit(search);
+    this.passSearchTerm.emit(search);
   }
 
 }

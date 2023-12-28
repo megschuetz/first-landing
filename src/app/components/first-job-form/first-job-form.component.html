@@ -78,12 +78,7 @@
         <mat-form-field appearance="outline">
           <mat-label>Options</mat-label>
           <mat-select formControlName="startingSalary">
-            <mat-option value="50k - 60k">50k - 60k</mat-option>
-            <mat-option value="60k - 70k">60k - 70k</mat-option>
-            <mat-option value="70k - 80k">70k - 80k</mat-option>
-            <mat-option value="80k - 90k">80k - 90k</mat-option>
-            <mat-option value="90k - 100k">90k - 100k</mat-option>
-            <mat-option value="100k +">100k +</mat-option>        
+            <mat-option *ngFor="let salary of salaries" value="{{salary}}">{{salary}}</mat-option>       
           </mat-select>
         </mat-form-field>
       </div>

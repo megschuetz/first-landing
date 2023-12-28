@@ -31,13 +31,13 @@ export class AppComponent implements OnInit {
 
   @HostListener("mousemove", ['$event'])
    onMouseMove(event: MouseEvent) {
-     this.mouse.x = event.pageX;
-     this.mouse.y = event.pageY;
+     this.mouse.x = event.pageX + 1;
+     this.mouse.y = event.pageY + 1;
    }
     
 
   ngOnInit() {
-    for (let i = 0; i < 8; i++) {
+    for (let i = 1; i < 8; i++) {
       const d = new Dot();
       this.dots.push(d);
       this.element.nativeElement.appendChild(d.node);

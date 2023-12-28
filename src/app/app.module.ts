@@ -22,12 +22,12 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { IconsComponent } from './icons/icons.component';
-import { StoriesFeedContainerComponent } from './components/stories-feed-container/stories-feed-container.component';
+import { StoriesFeedContainerComponent } from './components/discover/stories-feed-container/stories-feed-container.component';
 import { ReviewModalComponent } from './components/review-modal/review-modal.component';
 import { ButtonComponent } from './components/button/button.component';
 
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { StoriesFeedComponent } from './components/stories-feed/stories-feed.component';
+import { StoriesFeedComponent } from './components/discover/stories-feed/stories-feed.component';
 import { SearchBarComponent } from './components/search-bar/search-bar.component';
 import { SearchFilterPipe } from './pipes/search-filter.pipe';
 

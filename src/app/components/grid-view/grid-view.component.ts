@@ -16,7 +16,7 @@ import { isNull } from '@angular/compiler/src/output/output_ast';
 export class GridViewComponent implements OnInit {
 
   public rowData: IAlumni[] = []
-  public loading: boolean = true;
+  public isLoading: boolean = true;
   public storyToDisplay: any = {};
 
   constructor(private alumniService: AlumniService) {
@@ -27,8 +27,9 @@ export class GridViewComponent implements OnInit {
     const currentAlumni = await lastValueFrom(this.alumniService.getAlumni())
     currentAlumni.forEach(alumni => this.rowData.push(alumni))
     this.alumniService.getAddedAlumni().forEach(alum => this.rowData.push(alum))
-    this.storyToDisplay = this.rowData[0]
-    this.loading = false;
+    this.storyToDisplay = this.rowData[0];
+    setTimeout(() => this.isLoading = false , 500)
+    //this.isLoading = false;       
   }
 
   columnDefs: ColDef[] = [
@@ -66,5 +67,11 @@ export class GridViewComponent implements OnInit {
 
   onRowClicked(event: any) {
     this.storyToDisplay = event.data
+  }
+
+  onFilterChanged(event: any) {
+    const filters = event.columns.filterActive
+    console.log('filters', filters)
+    console.log(event)
   }
 }

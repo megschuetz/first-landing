@@ -1,18 +1,5 @@
 [
     {
-      "cohort": "2205",
-      "program": "BE",
-      "firstName": "John",
-      "lastName": "Smith",
-      "permanent": "Employee",
-      "title": "Software Developer",
-      "company": "Acme Corp",
-      "effectiveChanel": "Alumni Referral",
-      "monthHired": "May",
-      "startingSalary": "90k - 100k",
-      "storyResponse": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-    },
-    {
       "cohort": "2108",
       "program": "FE",
       "firstName": "Jane",
@@ -23,7 +10,20 @@
       "effectiveChanel": "Friend / Family",
       "monthHired": "August",
       "startingSalary": "70k - 80k",
-      "storyResponse": "My friend works as a developer at BCD Corp and he recommended me for the apprenticeship position. I'm excited to learn and grow as a developer."
+      "storyResponse": "In the bustling city of Techville I embarked on a challenging quest to secure my first job as a junior software developer. Through countless rejections, setbacks, and moments of self-doubt, my unwavering resilience and belief in my abilities led me to discover a small startup called InnovateTech. With a well-crafted application, a genuine eagerness to learn, and an impressive display of technical prowess during the interview, I triumphantly landed the position, setting the stage for a remarkable journey of growth, recognition, and ultimately choosing to remain loyal to the company that gave me my first chance."
+    },
+    {
+      "cohort": "2205",
+      "program": "BE",
+      "firstName": "John",
+      "lastName": "Smith",
+      "permanent": "Employee",
+      "title": "Software Developer",
+      "company": "Acme Corp",
+      "effectiveChanel": "Alumni Referral",
+      "monthHired": "May",
+      "startingSalary": "90k - 100k",
+      "storyResponse": "I vividly remember the day when I received the life-changing call that would forever alter the course of my career. After tirelessly applying to numerous positions, attending countless interviews, and enduring the rollercoaster of emotions that came with the job hunt, I finally landed my dream job as a software developer. The sheer joy and elation that rushed through me were indescribable as I accepted the offer, knowing that all my hard work and perseverance had paid off. Stepping into the office on my first day, a mix of excitement and nervousness consumed me, but I was determined to prove myself and make a lasting impact. Little did I know that this opportunity would become the foundation of a fulfilling journey, fueling my passion for coding, and opening doors to endless possibilities in the world of technology."
     },
     {
       "cohort": "2006",
@@ -36,7 +36,7 @@
       "effectiveChanel": "Cold Apply",
       "monthHired": "June",
       "startingSalary": "60k - 70k",
-      "storyResponse": "I applied online to the internship position at EFG Corp and was thrilled to get the job offer. I'm excited to learn and contribute to some really cool projects."
+      "storyResponse": "Armed with a quirky sense of humor and an insatiable appetite for coding, I set out on a comical odyssey to land my first job as a software developer. With every rejection letter, I couldn't help but wonder if my witty cover letter and pun-filled resume were a little too much for the corporate world to handle. But perseverance was my middle name, or so I convinced myself, as I embarked on yet another round of applications. And then, out of the blue, I received the call that changed everything. The interviewer had apparently seen through my jokes and appreciated my quirky charm. As I walked into the office on my first day, ready to unleash my comedic genius in the world of technology, I couldn't help but wonder if they were secretly hiring me to entertain the team during coffee breaks. Little did I know that this job would not only be a platform for my technical prowess but also a stage for laughter, camaraderie, and a series of hilarious coding mishaps that would keep us entertained for years to come."
     },
     {
       "cohort": "1905",
@@ -49,7 +49,7 @@
       "effectiveChanel": "Alumni Referral",
       "monthHired": "May",
       "startingSalary": "70k - 80k",
-      "storyResponse": "I met an alum from the program who works at GHI Corp and she recommended me for the apprenticeship position. I'm excited to learn and grow as a developer."
+      "storyResponse": "I vividly remember the day when I received the life-changing call that would forever alter the course of my career. After tirelessly applying to numerous positions, attending countless interviews, and enduring the rollercoaster of emotions that came with the job hunt, I finally landed my dream job as a software developer. The sheer joy and elation that rushed through me were indescribable as I accepted the offer, knowing that all my hard work and perseverance had paid off. Stepping into the office on my first day, a mix of excitement and nervousness consumed me, but I was determined to prove myself and make a lasting impact. Little did I know that this opportunity would become the foundation of a fulfilling journey, fueling my passion for coding, and opening doors to endless possibilities in the world of technology."
     },
     {
       "cohort": "2202",

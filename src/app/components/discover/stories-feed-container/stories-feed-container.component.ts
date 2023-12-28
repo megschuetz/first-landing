@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
-import { IAlumni } from '../../interfaces/alumni';
-import { AlumniService } from '../../alumni.service';
+import { Component, OnInit } from '@angular/core';
+import { IAlumni } from '../../../interfaces/alumni';
+import { AlumniService } from '../../../alumni.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-stories-feed-container',
@@ -13,6 +14,7 @@ export class StoriesFeedContainerComponent implements OnInit {
   public allStories: IAlumni[] = [];
   public isLoading: boolean = true;
   public searchTerm: string = '';
+  allStories$: Observable<IAlumni[]> | undefined;
   
   constructor(private alumniService: AlumniService) { }
 
