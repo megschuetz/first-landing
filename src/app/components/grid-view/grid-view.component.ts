@@ -1,12 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AlumniService } from '../../alumni.service';
 import { IAlumni } from '../../interfaces/alumni';
-import { ColDef, GridApi, GridOptions, SideBarDef } from 'ag-grid-community';
-import { Grid } from '@ag-grid-community/all-modules';
+import { ColDef, GridApi, SideBarDef } from 'ag-grid-community';
 import "ag-grid-enterprise";
 import { IconsComponent } from '../../icons/icons.component';
 import { lastValueFrom } from 'rxjs';
-import { isNull } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-grid-view',
@@ -28,8 +26,7 @@ export class GridViewComponent implements OnInit {
     currentAlumni.forEach(alumni => this.rowData.push(alumni))
     this.alumniService.getAddedAlumni().forEach(alum => this.rowData.push(alum))
     this.storyToDisplay = this.rowData[0];
-    setTimeout(() => this.isLoading = false , 500)
-    //this.isLoading = false;       
+    setTimeout(() => this.isLoading = false , 500)       
   }
 
   columnDefs: ColDef[] = [

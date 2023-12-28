@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, ValidationErrors, AbstractControl, ValidatorFn } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, ValidationErrors, AbstractControl } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { ReviewModalComponent } from '../review-modal/review-modal.component';
 import { Router } from '@angular/router';
@@ -23,7 +23,6 @@ export class FirstJobFormComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('here')
     this.jobStoryForm = this.userStory.group({
       cohort: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4), this.validCohort]],
       program: [null, [Validators.required]],
@@ -63,11 +62,11 @@ export class FirstJobFormComponent implements OnInit {
       width: '40%',
       height: '80%',
       data: this.jobStoryForm.value
-    })
+    });
     dialogRef.afterClosed().subscribe(result => {
       if(!result) return;
-      this.router.navigate(['feed'])
-    })
-  }
+      this.router.navigate(['feed']);
+    });
+  };
 
 }

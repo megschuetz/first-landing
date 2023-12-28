@@ -1,6 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, } from '@angular/forms';
-import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search-bar',

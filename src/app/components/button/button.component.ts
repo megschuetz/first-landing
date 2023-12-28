@@ -23,7 +23,7 @@ export class ButtonComponent {
     };
 
     switch(action) {
-      case 'windowTop': window.scrollTo({top: 0, behavior: 'smooth'}); console.log('window scroll to');
+      case 'windowTop': window.scrollTo({top: 0, behavior: 'smooth'}); 
     };
   }
 }

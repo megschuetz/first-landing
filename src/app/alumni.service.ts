@@ -19,7 +19,6 @@ export class AlumniService {
 
   public setAlumni(newAlumniStory: IAlumni) {   
     this._newAlumni.push(newAlumniStory)
-    console.log('after push', this._newAlumni)
   }
 
   public getAddedAlumni(): IAlumni[] {

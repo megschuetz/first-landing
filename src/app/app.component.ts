@@ -22,7 +22,6 @@ export class AppComponent implements OnInit {
   constructor(public element: ElementRef, private router: Router) { }
 
   onActivate() {
-    console.log('router outlet changed')
     window.scrollTo(0,0)
     if(this.router.url.length > 1) { this.showAnimateHeader = false; this.showStickyHeader = true }
     if(this.router.url.length == 1) { this.showAnimateHeader = true; this.showStickyHeader = false }
@@ -54,7 +53,6 @@ export class AppComponent implements OnInit {
   draw() {
     let x = this.mouse.x;
     let y = this.mouse.y;
-    console.log(x,y)
 
     this.dots.forEach((dot, index, dots) => {
       const nextDot = dots[index + 1] || dots[0];
