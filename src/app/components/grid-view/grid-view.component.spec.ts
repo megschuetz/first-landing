@@ -8,9 +8,8 @@ describe('GridViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ GridViewComponent ]
-    })
-    .compileComponents();
+      declarations: [GridViewComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

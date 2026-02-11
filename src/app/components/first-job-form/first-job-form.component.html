@@ -6,7 +6,7 @@
         <label for="cohort">Cohort</label>
         <mat-form-field appearance="outline">
           <mat-label>Cohort(0000)</mat-label>
-          <input formControlName="cohort" matInput>
+          <input formControlName="cohort" matInput />
         </mat-form-field>
       </div>
       <div class="form-group cohortpro">
@@ -19,35 +19,35 @@
           </mat-select>
         </mat-form-field>
       </div>
-   </div>
-   <div class="full-name">
-     <div class="form-group first-name">
-       <label for="firstName">First Name</label>
-       <mat-form-field appearance="outline">
-         <mat-label>First Last</mat-label>
-         <input formControlName="firstName" matInput>
-       </mat-form-field>
-     </div>
-     <div class="form-group last-name">
-       <label for="lastName">Last Name</label>
-       <mat-form-field appearance="outline">
-         <mat-label>First Last</mat-label>
-         <input formControlName="lastName" matInput>
-       </mat-form-field>
-     </div>
-   </div>
-   <div class="form-group">
-     <label for="title">Title</label>
-     <mat-form-field appearance="outline">
-       <mat-label>Title</mat-label>
-       <input formControlName="title" matInput>
+    </div>
+    <div class="full-name">
+      <div class="form-group first-name">
+        <label for="firstName">First Name</label>
+        <mat-form-field appearance="outline">
+          <mat-label>First Last</mat-label>
+          <input formControlName="firstName" matInput />
+        </mat-form-field>
+      </div>
+      <div class="form-group last-name">
+        <label for="lastName">Last Name</label>
+        <mat-form-field appearance="outline">
+          <mat-label>First Last</mat-label>
+          <input formControlName="lastName" matInput />
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <mat-form-field appearance="outline">
+        <mat-label>Title</mat-label>
+        <input formControlName="title" matInput />
       </mat-form-field>
     </div>
     <div class="form-group">
       <label for="summary">Company</label>
       <mat-form-field appearance="outline">
         <mat-label>Company</mat-label>
-        <input formControlName="company" matInput>
+        <input formControlName="company" matInput />
       </mat-form-field>
     </div>
     <div class="form-group">
@@ -78,7 +78,9 @@
         <mat-form-field appearance="outline">
           <mat-label>Options</mat-label>
           <mat-select formControlName="startingSalary">
-            <mat-option *ngFor="let salary of salaries" value="{{salary}}">{{salary}}</mat-option>       
+            @for (salary of salaries; track salary) {
+              <mat-option value="{{ salary }}">{{ salary }}</mat-option>
+            }
           </mat-select>
         </mat-form-field>
       </div>
@@ -87,19 +89,31 @@
         <mat-form-field appearance="outline">
           <mat-label>Options</mat-label>
           <mat-select formControlName="monthHired">
-            <mat-option *ngFor="let month of months" value="{{month}}">{{month}}</mat-option>       
+            @for (month of months; track month) {
+              <mat-option value="{{ month }}">{{ month }}</mat-option>
+            }
           </mat-select>
         </mat-form-field>
       </div>
     </div>
-    <br>
+    <br />
     <p class="form-prompt">Now, let's get to the tea - spill it!</p>
     <div class="form-group">
       <mat-form-field appearance="outline">
-        <mat-label>Copy and paste the story of how you landed your first dev role.</mat-label>
+        <mat-label
+          >Copy and paste the story of how you landed your first dev
+          role.</mat-label
+        >
         <textarea matInput formControlName="storyResponse"></textarea>
       </mat-form-field>
     </div>
-    <button [disabled]="jobStoryForm.invalid" mat-flat-button color="primary" (click)="submitForm()">Review</button>
+    <button
+      [disabled]="jobStoryForm.invalid"
+      mat-flat-button
+      color="primary"
+      (click)="submitForm()"
+    >
+      Review
+    </button>
   </form>
 </div>

@@ -1,39 +1,45 @@
 import { Component, HostListener, OnInit, ElementRef } from '@angular/core';
-import { Dot, Mouse } from './helpers/dot-helper'
+import { Dot, Mouse } from './helpers/dot-helper';
 import { Router } from '@angular/router';
-
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  standalone: false,
 })
 export class AppComponent implements OnInit {
-
   showAnimateHeader: boolean = true;
-  showStickyHeader: boolean = false; 
+  showStickyHeader: boolean = false;
   title: string = 'first-landing';
-  dots: Dot[] = []
+  dots: Dot[] = [];
   mouse: Mouse = {
     x: 0,
-    y: 0
-  }
+    y: 0,
+  };
 
-  constructor(public element: ElementRef, private router: Router) { }
+  constructor(
+    public element: ElementRef,
+    private router: Router,
+  ) {}
 
   onActivate() {
-    window.scrollTo(0,0)
-    if(this.router.url.length > 1) { this.showAnimateHeader = false; this.showStickyHeader = true }
-    if(this.router.url.length == 1) { this.showAnimateHeader = true; this.showStickyHeader = false }
+    window.scrollTo(0, 0);
+    if (this.router.url.length > 1) {
+      this.showAnimateHeader = false;
+      this.showStickyHeader = true;
+    }
+    if (this.router.url.length == 1) {
+      this.showAnimateHeader = true;
+      this.showStickyHeader = false;
+    }
   }
 
-
-  @HostListener("mousemove", ['$event'])
-   onMouseMove(event: MouseEvent) {
-     this.mouse.x = event.pageX + 1;
-     this.mouse.y = event.pageY + 1;
-   }
-    
+  @HostListener('mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    this.mouse.x = event.pageX + 1;
+    this.mouse.y = event.pageY + 1;
+  }
 
   ngOnInit() {
     for (let i = 1; i < 8; i++) {
@@ -47,7 +53,7 @@ export class AppComponent implements OnInit {
       requestAnimationFrame(animate);
     };
 
-   //animate();
+    //animate();
   }
 
   draw() {
@@ -64,5 +70,4 @@ export class AppComponent implements OnInit {
       y += (nextDot.y - dot.y) * 0.9;
     });
   }
-
 }

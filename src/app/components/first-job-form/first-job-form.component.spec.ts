@@ -7,9 +7,8 @@ describe('FirstJobFormComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ FirstJobFormComponent ]
-    })
-    .compileComponents();
+      declarations: [FirstJobFormComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {

@@ -1,14 +1,18 @@
 <div class="app">
-  <div *ngIf="showAnimateHeader" class="header-content">
-     <header class="end-transition-header">
+  @if (showAnimateHeader) {
+    <div class="header-content">
+      <header class="end-transition-header">
         <h1 class="smaller-text" routerLink="">First Landing.</h1>
         <div class="nav">
           <h3 routerLink="feed">Discover</h3>
           <h3 routerLink="grid">Analytics</h3>
         </div>
-     </header>
-  </div>
-  <app-short-header *ngIf="showStickyHeader"></app-short-header>
+      </header>
+    </div>
+  }
+  @if (showStickyHeader) {
+    <app-short-header></app-short-header>
+  }
   <router-outlet (activate)="onActivate()"></router-outlet>
   <footer>
     <h1>First Landing.</h1>

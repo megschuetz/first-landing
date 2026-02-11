@@ -1,6 +1,14 @@
 <div class="btn-container">
-  <button routerLink="{{link}}" class="{{size}} {{type}}" (click)="triggerAction($event, click)">
-    <span *ngIf="title">{{title}}</span>
-    <mat-icon *ngIf="iconName">{{iconName}}</mat-icon>
+  <button
+    routerLink="{{ link }}"
+    class="{{ size }} {{ type }}"
+    (click)="triggerAction($event, click)"
+  >
+    @if (title) {
+      <span>{{ title }}</span>
+    }
+    @if (iconName) {
+      <mat-icon>{{ iconName }}</mat-icon>
+    }
   </button>
 </div>

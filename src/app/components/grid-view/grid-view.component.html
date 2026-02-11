@@ -1,31 +1,39 @@
-<div *ngIf="isLoading" class="loading-container">
-  <mat-spinner color="primary"></mat-spinner>
-</div>
-<div *ngIf="!isLoading" class="stories-section">
-  <section class="planet-section">
-    <img class="planet-img" src="../assets/planet gif.gif" alt="cartoon planet image" />
-  </section>
-  <div class="selected-story">
-    <p>{{storyToDisplay.storyResponse}}</p>
-    <p> - {{storyToDisplay.firstName}} {{storyToDisplay.lastName}}</p>
+@if (isLoading) {
+  <div class="loading-container">
+    <mat-spinner color="primary"></mat-spinner>
   </div>
-</div>
+}
+@if (!isLoading) {
+  <div class="stories-section">
+    <section class="planet-section">
+      <img
+        class="planet-img"
+        src="../assets/planet gif.gif"
+        alt="cartoon planet image"
+      />
+    </section>
+    <div class="selected-story">
+      <p>{{ storyToDisplay.storyResponse }}</p>
+      <p>- {{ storyToDisplay.firstName }} {{ storyToDisplay.lastName }}</p>
+    </div>
+  </div>
+}
 <div class="filter-icon">
   <mat-icon>filter_alt</mat-icon>
   <p class="filters">Filters:</p>
 </div>
-<div *ngIf="rowData.length" class="grid-container">
-  <ag-grid-angular
-    class="ag-theme-alpine" 
-    [rowData]="rowData"
-    [columnDefs]="columnDefs"
-    [defaultColDef]="defaultColDef"
-    (gridReady)="onGridReady($event)"
-    (rowClicked)="onRowClicked($event)"
-    (filterChanged)="onFilterChanged($event)"
-    [sideBar]="sideBar"
-  >
-  </ag-grid-angular>
-</div>
-
-
+@if (rowData.length) {
+  <div class="grid-container">
+    <ag-grid-angular
+      class="ag-theme-alpine"
+      [rowData]="rowData"
+      [columnDefs]="columnDefs"
+      [defaultColDef]="defaultColDef"
+      (gridReady)="onGridReady($event)"
+      (rowClicked)="onRowClicked($event)"
+      (filterChanged)="onFilterChanged($event)"
+      [sideBar]="sideBar"
+    >
+    </ag-grid-angular>
+  </div>
+}

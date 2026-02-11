@@ -1,8 +1,8 @@
 /* SCSS HEX */
-$periwinkle: #CBCBFFff;
-$tropical-indigo: #7D7DFBff;
-$white: #FFFFFFff;
-$risd-blue: #5551FF;
+$periwinkle: #cbcbffff;
+$tropical-indigo: #7d7dfbff;
+$white: #ffffffff;
+$risd-blue: #5551ff;
 $mint: #00bd9dff;
 
 /* SCSS RGB */
@@ -12,15 +12,63 @@ $white: rgba(255, 255, 255, 1);
 $risd-blue: rgba(85, 81, 255, 1);
 
 /* SCSS Gradient */
-$gradient-top: linear-gradient(0deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-right: linear-gradient(90deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-bottom: linear-gradient(180deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-left: linear-gradient(270deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-top-right: linear-gradient(45deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-bottom-right: linear-gradient(135deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-top-left: linear-gradient(225deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-bottom-left: linear-gradient(315deg, #CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
-$gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
+$gradient-top: linear-gradient(
+  0deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-right: linear-gradient(
+  90deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-bottom: linear-gradient(
+  180deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-left: linear-gradient(
+  270deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-top-right: linear-gradient(
+  45deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-bottom-right: linear-gradient(
+  135deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-top-left: linear-gradient(
+  225deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-bottom-left: linear-gradient(
+  315deg,
+  #cbcbffff,
+  #7d7dfbff,
+  #ffffffff,
+  #5551feff
+);
+$gradient-radial: radial-gradient(#cbcbffff, #7d7dfbff, #ffffffff, #5551feff);
 
 ::ng-deep {
   .loading-container {
@@ -30,13 +78,13 @@ $gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
     align-items: center;
   }
 }
-  
+
 .start-transition-header {
   padding-top: 30px;
   height: 23vh;
   border-bottom: 1px solid rgba(203, 203, 255, 0);
   background-color: white;
-  transition: 1.0s;
+  transition: 1s;
 
   display: flex;
   justify-content: space-between;
@@ -49,7 +97,7 @@ $gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
   padding: 20px;
   padding-top: 20px;
   height: 6vh !important;
-  border-bottom: 1px solid rgba(203, 203, 255, .8);
+  border-bottom: 1px solid rgba(203, 203, 255, 0.8);
   background-color: white;
 
   display: flex;
@@ -65,11 +113,11 @@ $gradient-radial: radial-gradient(#CBCBFFff, #7D7DFBff, #FFFFFFff, #5551FEff);
 }
 
 h1 {
-  font-family: 'Hind-Bold', sans-serif;
+  font-family: "Hind-Bold", sans-serif;
   font-size: 11vw;
   padding-top: 55px;
   color: $risd-blue;
-  transition: 1.0s;
+  transition: 1s;
 }
 
 .smaller-text {
@@ -78,7 +126,7 @@ h1 {
 }
 
 h3 {
-  font-family: 'Hind-Light', sans-serif;
+  font-family: "Hind-Light", sans-serif;
   color: $risd-blue;
   font-size: 25px;
   margin-left: 8px;
@@ -96,13 +144,11 @@ h3:hover {
   padding-top: 10px;
 }
 
-
 h2 {
-  font-family: 'Hind-Medium', sans-serif;
+  font-family: "Hind-Medium", sans-serif;
   align-self: flex-end;
   margin: 0px;
 }
-
 
 footer {
   position: relative;
@@ -122,48 +168,39 @@ footer h1 {
   align-self: flex-start;
 }
 
-
 .footer-links {
   display: flex;
   justify-content: space-evenly;
   width: 50%;
 }
 
-
 .footer-column {
   display: flex;
   flex-direction: column;
 }
 
-.footer-column > h2, a {
+.footer-column > h2,
+a {
   color: $white;
   align-self: flex-start;
 }
 
-
-
 @font-face {
-  font-family: 'Hind-Light';
-  src: url('../assets/HindMaduraiFont/HindMadurai-Light.ttf');
+  font-family: "Hind-Light";
+  src: url("../assets/HindMaduraiFont/HindMadurai-Light.ttf");
 }
 
 @font-face {
-  font-family: 'Hind-Medium';
-  src: url('../assets/HindMaduraiFont/HindMadurai-Medium.ttf');
+  font-family: "Hind-Medium";
+  src: url("../assets/HindMaduraiFont/HindMadurai-Medium.ttf");
 }
 
 @font-face {
-  font-family: 'Hind-Bold';
-  src: url('../assets/HindMaduraiFont/HindMadurai-Bold.ttf');
+  font-family: "Hind-Bold";
+  src: url("../assets/HindMaduraiFont/HindMadurai-Bold.ttf");
 }
 
 @font-face {
-  font-family: 'Hind-SemiBold';
-  src: url('../assets/HindMaduraiFont/HindMadurai-SemiBold.ttf');
+  font-family: "Hind-SemiBold";
+  src: url("../assets/HindMaduraiFont/HindMadurai-SemiBold.ttf");
 }
-
-
-
-
-
-

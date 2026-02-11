@@ -1,8 +1,8 @@
 /* SCSS HEX */
-$periwinkle: #CBCBFFff;
-$tropical-indigo: #7D7DFBff;
-$white: #FFFFFFff;
-$risd-blue: #5551FF;
+$periwinkle: #cbcbffff;
+$tropical-indigo: #7d7dfbff;
+$white: #ffffffff;
+$risd-blue: #5551ff;
 $mint: #00bd9dff;
 
 /* SCSS RGB */
@@ -11,14 +11,13 @@ $tropical-indigo: rgba(125, 125, 251, 1);
 $white: rgba(255, 255, 255, 1);
 $risd-blue: rgba(85, 81, 255, 1);
 
-
 .landing-page {
   margin-top: 20px;
   height: calc((100vh - 23vh) - 20px);
 }
 
 h2 {
-  color: $risd-blue
+  color: $risd-blue;
 }
 
 .rocket-section {
@@ -44,5 +43,3 @@ h2 {
   display: flex;
   justify-content: center;
 }
-
-

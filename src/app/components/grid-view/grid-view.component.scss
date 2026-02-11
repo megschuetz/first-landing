@@ -1,8 +1,8 @@
 /* SCSS HEX */
-$periwinkle: #CBCBFFff;
-$tropical-indigo: #7D7DFBff;
-$white: #FFFFFFff;
-$risd-blue: #5551FF;
+$periwinkle: #cbcbffff;
+$tropical-indigo: #7d7dfbff;
+$white: #ffffffff;
+$risd-blue: #5551ff;
 $mint: #00bd9dff;
 
 // * {
@@ -18,14 +18,14 @@ ag-grid-angular {
   --ag-font-family: "Hind-Light", sans-serif;
   --ag-borders: solid 1px;
   --ag-border-radius: 5px;
-  --ag-foreground-color: #5551FF;
-  --ag-header-foreground-color: #FFFFFFff;
-  --ag-header-background-color: #5551FF;
+  --ag-foreground-color: #5551ff;
+  --ag-header-foreground-color: #ffffffff;
+  --ag-header-background-color: #5551ff;
   --ag-subheader-background-color: #00bd9dff;
-  --ag-border-color: #5551FF;
-  --ag-row-border-color: rgba(203, 203, 255, .8);
-  --ag-row-hover-color:rgba(85, 81, 255, .05);
-  --ag-column-hover-color: rgba(85, 81, 255, .8);
+  --ag-border-color: #5551ff;
+  --ag-row-border-color: rgba(203, 203, 255, 0.8);
+  --ag-row-hover-color: rgba(85, 81, 255, 0.05);
+  --ag-column-hover-color: rgba(85, 81, 255, 0.8);
 }
 
 .grid-container {
@@ -78,4 +78,3 @@ ag-grid-angular {
   font-size: 17px;
   line-height: 23px;
 }
-
